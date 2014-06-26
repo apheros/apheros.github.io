@@ -1,0 +1,456 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>如何在GitHub上创建个人博客 | Apheros&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Apheros">
+    
+    <meta name="description" content="写在前面
+一直想架设一个个人博客，但是一直懒得动手。不知道是不是想留下点什么，终于决定动手，所以才有了这个个人博客。第一篇文章，就把架设博客的过程写一下吧。
+博客架在GitHub上，这个代码托管网站相信大家都知道。选择GitHub，逼格够高，而且可以想管理代码一样，管理博客。虽然，博客几乎不需要进行">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/pisces.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/tuanzi.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/tuanzi.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/tuanzi.png" alt="Apheros&#39;s Blog" title="Apheros&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Apheros&#39;s Blog">Apheros&#39;s Blog</a></h1>
+				<h2 class="blog-motto">To boldly go where no one has gone before</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:apheros.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/06/23/buildbolg/" title="如何在GitHub上创建个人博客" itemprop="url">如何在GitHub上创建个人博客</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://plus.google.com/106530355542274940510?rel=author" title="Apheros" target="_blank" itemprop="author">Apheros</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-06-22T16:06:09.000Z" itemprop="datePublished">Jun 23 2014</time>
+    Updated:<time datetime="2014-06-24T04:41:49.000Z" itemprop="dateModified">Jun 24 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">7.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">7.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">7.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">7.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-number">8.</span> <span class="toc-text">感谢</span></a></li></ol>
+		</div>
+		
+		<h2 id="写在前面">写在前面</h2>
+<p>一直想架设一个个人博客，但是一直懒得动手。不知道是不是想留下点什么，终于决定动手，所以才有了这个个人博客。第一篇文章，就把架设博客的过程写一下吧。</p>
+<p>博客架在<a href="https://github.com/" target="_blank" rel="external">GitHub</a>上，这个代码托管网站相信大家都知道。选择GitHub，逼格够高，而且可以想管理代码一样，管理博客。虽然，博客几乎不需要进行版本控制，但是Git提供的自动化工具，还是很好用的。相比租服务器空间架设博客，GitHub的好处是不用自己维护。但是GitHub只能展示静态网页，而且没有数据库，空间也不大，图片什么的最好弄个图床。不过，已经基本满足我的需求了。静态页面生成工具，我选择<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>，来自台湾tommy351的开源项目，基于Node.js，支持Markdown语法，使用非常方便。我没有用过诸如Jekyll等其他程序，这里就不做评论了。</p>
+<p>在开始之前，先推荐一个开发利器——<a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a>，谁用谁知道。我一直用它写python脚本，Latex论文，以及HTML，JS，CSS等前端开发。本篇博客就是在Sublime Text上写的。</p>
+<p><em>我的平台是Ubuntu 14.04LTS，整个过程非常简单，Windows上应该也差不多。</em></p>
+<h2 id="安装必要软件">安装必要软件</h2>
+<p><em>Node.js</em></p>
+<figure class="highlight bash"><pre>$ <span class="built_in">sudo</span> apt-get install python-software-properties python g++ make
+$ <span class="built_in">sudo</span> add-apt-repository ppa:chris-lea/node.js
+$ <span class="built_in">sudo</span> apt-get update
+$ <span class="built_in">sudo</span> apt-get install nodejs
+</pre></figure>
+
+<p>当然也可以去<a href="http://nodejs.org/" target="_blank" rel="external">官网</a>下载，编译源码，我比较懒，一切都交给包管理器吧。</p>
+<p><em>Hexo</em></p>
+<figure class="highlight bash"><pre>$ npm install -g hexo
+</pre></figure>
+
+<p><em>git</em></p>
+<figure class="highlight bash"><pre>$ <span class="built_in">sudo</span> apt-get install git
+</pre></figure>
+
+
+<h2 id="GitHub">GitHub</h2>
+<ul>
+<li>注册<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号</li>
+<li>建立仓库，仓库名必须为 yourusername.github.io</li>
+</ul>
+<h2 id="创建博客站点">创建博客站点</h2>
+<p>进入想要存储博客的目录，执行</p>
+<figure class="highlight bash"><pre>$ hexo init
+</pre></figure>
+
+<p>生成静态页面</p>
+<figure class="highlight bash"><pre>$ hexo generate
+</pre></figure>
+
+<p>启动本地服务</p>
+<figure class="highlight bash"><pre>$ hexo server
+</pre></figure>
+
+<p>访问<a href="localhost:4000" target="_blank" rel="external">localhost:4000</a>就可以看到刚才创建的博客。</p>
+<h2 id="写博客">写博客</h2>
+<p>接下来就可以写自己的博客了。</p>
+<figure class="highlight bash"><pre>$ hexo new [layout] <span class="string">"postname"</span>
+</pre></figure>
+
+<p>layout为文章模版，为可选参数，默认值为post，可到scaffolds目录下查看自带的layout，文件名称就是layout名称。当然，也可以自行修改或创建自己的layout。postName为创建的文件名，同时也是你文章的URL索引，postName如果包含空格，必须用”将其包围，postName可以为中文。</p>
+<p>Hexo将在/source/_posts中创建postname.md文件，使用你顺手的编辑器激扬文字吧。</p>
+<h2 id="发布到GitHub">发布到GitHub</h2>
+<p>首先，修改一下hexo的默认配置。进入博客根目录，打开_config.yml。找到Deployment属性，设置type: github，repo为GitHub上博客仓库的地址（在GitHub上打开仓库，就可以看到http和ssh的地址，任意一个均可），形如<a href="">http://github.com/yourusername/yourusername.github.io.git</a>。branch为分支名，没有新建分支的话，就填 master，message为commit信息。</p>
+<p>另外，在 Site 属性里，可以设置title，author等。更多属性，尽在Hexo<a href="http://hexo.io/docs/" target="_blank" rel="external">官方文档</a>。</p>
+<p>设置好后，就可以发布到Github上了，执行：</p>
+<figure class="highlight bash"><pre>$ hexo deploy
+</pre></figure>
+
+<p>等上几分钟，访问 yourusername.github.io就可以看到了。自此，博客搭建的基本工作就完成了。</p>
+<h2 id="个性化">个性化</h2>
+<p>想搭建个人博客肯定不会止步于此，Hexo提供了丰富的可定制项。下面介绍如何安装和修改主题。</p>
+<h3 id="安装主题">安装主题</h3>
+<p>Hexo的主题还是比较丰富的，可查看<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">官方主题列表</a>。</p>
+<figure class="highlight bash"><pre>$ git clone &lt;repository&gt; themes/&lt;theme-name&gt;
+</pre></figure>
+
+<p>打开博客根目录下的_config.yml文件，修改</p>
+<figure class="highlight"><pre><span class="attribute">theme</span>: <span class="string">&lt;theme-name&gt;</span>
+</pre></figure>
+
+<p>更新主题</p>
+<figure class="highlight bash"><pre>$ <span class="built_in">cd</span> themes/&lt;theme-name&gt;
+$ git pull
+</pre></figure>
+
+<p>打开主题根目录下的_config.yml可修改主题，或者直接修改source/css和layout/目录下的文件，可进行全面定制。</p>
+<p>本博客的主题为<a href="https://github.com/A-limon/pacman" target="_blank" rel="external">Pacman</a>，由A-limon开发，简洁大方。具体的配置，可参考作者的<a href="http://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="external">博客</a>。</p>
+<h3 id="绑定域名">绑定域名</h3>
+<ul>
+<li>购买域名，一般都推荐<a href="www.godaddy.com">Godaddy</a>。在网上搜个优惠码，可以便宜一些。</li>
+<li>设置DNS解析。可以去Godaddy设置（可能被墙），或是使用国内的<a href="https://www.dnspod.cn/" target="_blank" rel="external">dnspot</a>。添加一条A记录，IP需要<em>ping yourusername.github.io</em>。dnspot上的设置可参考<a href="https://support.dnspod.cn/Kb/showarticle/tsid/42" target="_blank" rel="external">dnspot官方文档</a></li>
+<li>在blog的根目录，添加文件CNAME，内容为申请的域名，如本站的<em>apheros.me</em>。</li>
+</ul>
+<p>需要等一段时间，才会生效。然后，就可以愉快的用新的域名访问博客了。 </p>
+<h3 id="评论系统">评论系统</h3>
+<p>静态博客需要依赖第三方评论系统。Hexo集成的是Disqus系统，而Pacman默认集成的是多说系统。在/theme/pacman/_config.yml中设置申请到的多说的ID和short name即可。</p>
+<h2 id="感谢">感谢</h2>
+<p>本篇文章与其说是安装笔记，不如说是感谢文。本博客的架设有赖于大家无私的分享，本文也参考了许多网络上的文章（其实比我写的有诚意的多）。在此，作统一的感谢。</p>
+<ul>
+<li>GitHub: 不解释</li>
+<li>tommy351: Hexo作者</li>
+<li>A-limon: Pacman主题作者</li>
+<li>还有一个叫<a href="http://ibruce.info/" target="_blank" rel="external">不如</a>的博客</li>
+</ul>
+<p>也许，还有没感谢到的人，也一并感谢了。<br>更多详细的内容，可以参考上述的博客或是看官方文档。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/github/">github</a><a href="/tags/blog/">blog</a><a href="/tags/hexo/">hexo</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/web/">web</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://apheros.me/2014/06/23/buildbolg/" data-title="如何在GitHub上创建个人博客 | Apheros&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">7.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">7.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">7.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">7.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-number">8.</span> <span class="toc-text">感谢</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/web/" title="web">web<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>1</sup></a></li>
+		
+			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">Tag Cloud</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/blog/" style="font-size: NaNpx;">blog</a><a href="/tags/github/" style="font-size: NaNpx;">github</a><a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a>
+    </div>
+  </div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 生は、死の始まり <br/>
+			死は、現実の続き</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		<a href="https://github.com/apheros" target="_blank" title="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
+		
+		<a href="http://apheros.me" target="_blank" title="Apheros">Apheros</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"apheros"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '52163437', 'apheros.me');  
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+</html>
