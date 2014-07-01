@@ -78,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-06-22T16:06:09.000Z" itemprop="datePublished">Jun 23 2014</time>
-    Updated:<time datetime="2014-06-24T04:41:49.000Z" itemprop="dateModified">Jun 24 2014</time>
+    Updated:<time datetime="2014-06-27T06:43:04.000Z" itemprop="dateModified">Jun 27 2014</time>
     
   </p>
 </header>
@@ -87,7 +87,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">7.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">7.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">7.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">7.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-number">8.</span> <span class="toc-text">感谢</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置SSH_Key"><span class="toc-number">6.1.</span> <span class="toc-text">设置SSH Key</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#自动化"><span class="toc-number">7.</span> <span class="toc-text">自动化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">8.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">8.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">8.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">8.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#鸣谢"><span class="toc-number">9.</span> <span class="toc-text">鸣谢</span></a></li></ol>
 		</div>
 		
 		<h2 id="写在前面">写在前面</h2>
@@ -140,13 +140,22 @@ $ <span class="built_in">sudo</span> apt-get install nodejs
 <p>layout为文章模版，为可选参数，默认值为post，可到scaffolds目录下查看自带的layout，文件名称就是layout名称。当然，也可以自行修改或创建自己的layout。postName为创建的文件名，同时也是你文章的URL索引，postName如果包含空格，必须用”将其包围，postName可以为中文。</p>
 <p>Hexo将在/source/_posts中创建postname.md文件，使用你顺手的编辑器激扬文字吧。</p>
 <h2 id="发布到GitHub">发布到GitHub</h2>
-<p>首先，修改一下hexo的默认配置。进入博客根目录，打开_config.yml。找到Deployment属性，设置type: github，repo为GitHub上博客仓库的地址（在GitHub上打开仓库，就可以看到http和ssh的地址，任意一个均可），形如<a href="">http://github.com/yourusername/yourusername.github.io.git</a>。branch为分支名，没有新建分支的话，就填 master，message为commit信息。</p>
-<p>另外，在 Site 属性里，可以设置title，author等。更多属性，尽在Hexo<a href="http://hexo.io/docs/" target="_blank" rel="external">官方文档</a>。</p>
+<p>首先，修改一下hexo的默认配置。进入博客根目录，打开_config.yml。找到Deployment选项，设置type: github，repo为GitHub上博客仓库的地址（在GitHub上打开仓库，就可以看到http和ssh的地址，任意一个均可），形如<a href="">http://github.com/yourusername/yourusername.github.io.git</a>。branch为分支名，没有新建分支的话，就填 master，message为commit信息。</p>
+<p>另外，在 Site 选项里，可以设置title，author等。更多属性，尽在Hexo<a href="http://hexo.io/docs/" target="_blank" rel="external">官方文档</a>。</p>
 <p>设置好后，就可以发布到Github上了，执行：</p>
 <figure class="highlight bash"><pre>$ hexo deploy
 </pre></figure>
 
 <p>等上几分钟，访问 yourusername.github.io就可以看到了。自此，博客搭建的基本工作就完成了。</p>
+<h3 id="设置SSH_Key">设置SSH Key</h3>
+<p>设置SSH Key，并使用SSH登陆的好处是不用每次输入用户名和密码。详细步骤，可参考<a href="https://help.github.com/articles/generating-ssh-keys" target="_blank" rel="external">官方文档</a></p>
+<h2 id="自动化">自动化</h2>
+<p>Hexo管理blog已经非常方便了，然而，有时候Hexo会出现修改文件，但是没有变化的问题。这个时候使用<em>hexo clean</em>清理public目录，再重新编译即可。更加关键的是，hexo会编译所有的md文件，包括REAdME.md。即使，把REAdME.md拷贝到Public/和.deploy/下也无济于事，重新编译又会删除。因此，写了个小小的shell，把这些都做了。</p>
+<figure class="highlight bash"><pre>
+
+</pre></figure>
+
+
 <h2 id="个性化">个性化</h2>
 <p>想搭建个人博客肯定不会止步于此，Hexo提供了丰富的可定制项。下面介绍如何安装和修改主题。</p>
 <h3 id="安装主题">安装主题</h3>
@@ -171,10 +180,10 @@ $ git pull
 <li>设置DNS解析。可以去Godaddy设置（可能被墙），或是使用国内的<a href="https://www.dnspod.cn/" target="_blank" rel="external">dnspot</a>。添加一条A记录，IP需要<em>ping yourusername.github.io</em>。dnspot上的设置可参考<a href="https://support.dnspod.cn/Kb/showarticle/tsid/42" target="_blank" rel="external">dnspot官方文档</a></li>
 <li>在blog的根目录，添加文件CNAME，内容为申请的域名，如本站的<em>apheros.me</em>。</li>
 </ul>
-<p>需要等一段时间，才会生效。然后，就可以愉快的用新的域名访问博客了。 </p>
+<p>需要等一段时间，才会生效。然后，就可以愉快的用新的域名访问博客了。</p>
 <h3 id="评论系统">评论系统</h3>
 <p>静态博客需要依赖第三方评论系统。Hexo集成的是Disqus系统，而Pacman默认集成的是多说系统。在/theme/pacman/_config.yml中设置申请到的多说的ID和short name即可。</p>
-<h2 id="感谢">感谢</h2>
+<h2 id="鸣谢">鸣谢</h2>
 <p>本篇文章与其说是安装笔记，不如说是感谢文。本博客的架设有赖于大家无私的分享，本文也参考了许多网络上的文章（其实比我写的有诚意的多）。在此，作统一的感谢。</p>
 <ul>
 <li>GitHub: 不解释</li>
@@ -209,6 +218,19 @@ $ git pull
 </footer>   	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/06/27/algoriths_haskell_0/" title="《algorithms》学习笔记（haskell实现） 序">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  《algorithms》学习笔记（haskell实现） 序</span>
+</a>
+</div>
+
+
+</nav>
+
 	
 <section class="comment">
 	<div class="ds-thread"></div>
@@ -219,7 +241,7 @@ $ git pull
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">7.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">7.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">7.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">7.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-number">8.</span> <span class="toc-text">感谢</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装必要软件"><span class="toc-number">2.</span> <span class="toc-text">安装必要软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GitHub"><span class="toc-number">3.</span> <span class="toc-text">GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客站点"><span class="toc-number">4.</span> <span class="toc-text">创建博客站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">5.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布到GitHub"><span class="toc-number">6.</span> <span class="toc-text">发布到GitHub</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置SSH_Key"><span class="toc-number">6.1.</span> <span class="toc-text">设置SSH Key</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#自动化"><span class="toc-number">7.</span> <span class="toc-text">自动化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个性化"><span class="toc-number">8.</span> <span class="toc-text">个性化</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题"><span class="toc-number">8.1.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#绑定域名"><span class="toc-number">8.2.</span> <span class="toc-text">绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论系统"><span class="toc-number">8.3.</span> <span class="toc-text">评论系统</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#鸣谢"><span class="toc-number">9.</span> <span class="toc-text">鸣谢</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -230,6 +252,8 @@ $ git pull
 <div class="categorieslist">
 	<p class="asidetitle">Categories</p>
 		<ul>
+		
+			<li><a href="/categories/algorithm/" title="algorithm">algorithm<sup>1</sup></a></li>
 		
 			<li><a href="/categories/web/" title="web">web<sup>1</sup></a></li>
 		
@@ -242,9 +266,13 @@ $ git pull
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
+			<li><a href="/tags/algorithm/" title="algorithm">algorithm<sup>1</sup></a></li>
+		
 			<li><a href="/tags/blog/" title="blog">blog<sup>1</sup></a></li>
 		
 			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/haskell/" title="haskell">haskell<sup>1</sup></a></li>
 		
 			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 		
@@ -256,7 +284,7 @@ $ git pull
   <div class="tagcloudlist">
     <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/blog/" style="font-size: NaNpx;">blog</a><a href="/tags/github/" style="font-size: NaNpx;">github</a><a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a>
+       <a href="/tags/algorithm/" style="font-size: NaNpx;">algorithm</a><a href="/tags/blog/" style="font-size: NaNpx;">blog</a><a href="/tags/github/" style="font-size: NaNpx;">github</a><a href="/tags/haskell/" style="font-size: NaNpx;">haskell</a><a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a>
     </div>
   </div>
 
@@ -277,8 +305,9 @@ $ git pull
 	
 	
 	<section class="info">
-		<p> 生は、死の始まり <br/>
-			死は、現実の続き</p>
+		<p"> 生は、死の始まり </p>
+		<p style="margin-left:0em;"> 死は、現実の続き </p>
+		<p style="margin-left:0em;"> そして再生は、夢の終わり </p>
 	</section>
 	 
 	<div class="social-font" class="clearfix">
