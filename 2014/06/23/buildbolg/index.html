@@ -78,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-06-22T16:06:09.000Z" itemprop="datePublished">Jun 23 2014</time>
-    Updated:<time datetime="2014-07-01T14:01:23.000Z" itemprop="dateModified">Jul 1 2014</time>
+    Updated:<time datetime="2014-07-01T14:10:10.000Z" itemprop="dateModified">Jul 1 2014</time>
     
   </p>
 </header>
@@ -156,6 +156,7 @@ $ <span class="built_in">sudo</span> apt-get install nodejs
 BLOG_HOME=&lt;YOUR_BLOG_DIRECTORY&gt; 
 
 <span class="keyword">if</span> <span class="literal">true</span>; <span class="keyword">then</span>
+    <span class="built_in">cd</span> <span class="variable">$BLOG_HOME</span>
     hexo generate
     cp README.md <span class="variable">$BLOG_HOME</span>/public
     hexo deploy
